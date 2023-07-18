@@ -7,7 +7,11 @@ import App from './App.tsx';
 
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root') as HTMLElement;
+
+const domRoot = ReactDOM.createRoot(rootElement);
+
+domRoot.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
