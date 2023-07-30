@@ -26,7 +26,5 @@ export default TodoList;
  * 1. Auto retries
  * 2. Auto refresh
  * 3. Caching
- *
- * Problems in this code;
- * 1. No separation of concerns: Make a custom hook (useTodos)
+ * 4. Separation of concerns handled
  */
