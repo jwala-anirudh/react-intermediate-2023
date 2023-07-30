@@ -1,4 +1,4 @@
-import TodoList from './react-query/TodoList';
+import TodoList from './react-query/Todos/TodoList';
 
 const App = () => {
   return <TodoList />;

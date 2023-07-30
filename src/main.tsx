@@ -14,6 +14,20 @@ const rootElement = document.getElementById('root') as HTMLElement;
 
 const domRoot = ReactDOM.createRoot(rootElement);
 
+/**
+const reactQueryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 3,
+      cacheTime: 300_000, // 5 mins
+      staleTime: 10 * 1000, // 10s
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: false,
+      refetchOnMount: false,
+    },
+  },
+});  */
+
 const reactQueryClient = new QueryClient();
 
 domRoot.render(
