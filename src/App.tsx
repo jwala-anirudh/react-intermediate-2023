@@ -1,5 +1,7 @@
+import TodoList from './react-query/TodoList';
+
 const App = () => {
-  return <h1>React Starter Project</h1>;
+  return <TodoList />;
 };
 
 export default App;
