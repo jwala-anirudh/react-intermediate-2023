@@ -1,22 +1,7 @@
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
-
-import { Todo } from './Todo.model';
+import useTodos from './useTodos';
 
 const TodoList = () => {
-  const fetchTodos = () =>
-    axios
-      .get<Todo[]>('https://jsonplaceholder.typicode.com/todos')
-      .then((res) => res.data);
-
-  const {
-    data: todos,
-    error,
-    isLoading,
-  } = useQuery<Todo[], Error>({
-    queryKey: ['todos'],
-    queryFn: fetchTodos,
-  });
+  const { data: todos, error, isLoading } = useTodos();
 
   if (isLoading) return <p>Loading...</p>;
 
@@ -41,4 +26,7 @@ export default TodoList;
  * 1. Auto retries
  * 2. Auto refresh
  * 3. Caching
+ *
+ * Problems in this code;
+ * 1. No separation of concerns: Make a custom hook (useTodos)
  */
