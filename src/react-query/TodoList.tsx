@@ -34,3 +34,13 @@ const TodoList = () => {
 };
 
 export default TodoList;
+
+/**
+ * Problems with the code;
+ * 
+ * 1. Not cancelling the requests when component is unmounted
+ * 2. No separation of concerns
+ * 3. No retries
+ * 4. No automatic refresh
+ * 5. No caching
+ */
